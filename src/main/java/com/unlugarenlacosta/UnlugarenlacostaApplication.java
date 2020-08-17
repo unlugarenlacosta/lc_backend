@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class UnlugarenlacostaApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(UnlugarenlacostaApplication.class, args);
 	}
-
 }
