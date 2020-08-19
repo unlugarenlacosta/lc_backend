@@ -15,9 +15,9 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping(path="/name")
+    @GetMapping(path="/username")
     public ResponseEntity get(@RequestParam String name) {
-        User user = userRepository.findByName(name);
+        User user = userRepository.findByUsername(name);
         return new ResponseEntity(new GenericResponse("OK", user), HttpStatus.OK);
     }
 }
