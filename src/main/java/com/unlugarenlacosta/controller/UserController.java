@@ -21,18 +21,23 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    //Metodo que busca un usuario por username y devuelve toda la entiedad usuario, del usuario encontrado
     @GetMapping(path="/username")
     public ResponseEntity findUsername(@RequestParam String username) {
         User user = userRepository.findByUsername(username);
         return new ResponseEntity(new GenericResponse("OK", user), HttpStatus.OK);
     }
-
+    //Metodo que busca un usuario por email y devuelve toda la entiedad usuario, del usuario encontrado
     @GetMapping(path="/email")
     public ResponseEntity findEmail(@RequestParam String email) {
         User user = userRepository.findByEmail(email);
         return new ResponseEntity(new GenericResponse("OK", user), HttpStatus.OK);
     }
-
+    /**
+     * Metodo para registar a un usuario ha partir de un Bean
+     * El bean se crea para mapear los datos recibidos
+     * Los datos recibidos se setean en la entiedad usuario y despues se guardan
+    **/
     @PostMapping(path="/register")
     public ResponseEntity saveUser(@RequestBody UserBean userBean) {
         User user = new User();
@@ -47,6 +52,11 @@ public class UserController {
         return new ResponseEntity(new GenericResponse("OK", userBean), HttpStatus.OK);
     }
 
+    /**
+     * Metodo para verificar que el usuario existe en la base de datos y puede entrar
+     * Primero se mira si el usuario existe, si existe entrara en la condición
+     * Se desencripta la contraseña para comprobar que es correcta y se devuelve el usuario
+     */
     @PostMapping(path="/login")
     public ResponseEntity loginUser(@RequestBody UserBean userBean) {
         User user = userRepository.findByEmail(userBean.getEmail());
