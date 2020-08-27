@@ -21,13 +21,17 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    //Metodo que busca un usuario por username y devuelve toda la entiedad usuario, del usuario encontrado
+    /**
+     * Metodo que busca un usuario por username y devuelve toda la entiedad usuario, del usuario encontrado
+     **/
     @GetMapping(path="/username")
     public ResponseEntity findUsername(@RequestParam String username) {
         User user = userRepository.findByUsername(username);
         return new ResponseEntity(new GenericResponse("OK", user), HttpStatus.OK);
     }
-    //Metodo que busca un usuario por email y devuelve toda la entiedad usuario, del usuario encontrado
+    /**
+      * Metodo que busca un usuario por email y devuelve toda la entiedad usuario, del usuario encontrado
+     **/
     @GetMapping(path="/email")
     public ResponseEntity findEmail(@RequestParam String email) {
         User user = userRepository.findByEmail(email);
@@ -49,7 +53,7 @@ public class UserController {
         user.setDeleted(false);
         user.setUsername(userBean.getUsername());
         userRepository.save(user);
-        return new ResponseEntity(new GenericResponse("OK", userBean), HttpStatus.OK);
+        return new ResponseEntity(new GenericResponse("OK", user), HttpStatus.OK);
     }
 
     /**
