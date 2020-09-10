@@ -73,10 +73,10 @@
             <version>5.3.4.RELEASE</version>
         </dependency>
         <!-- Dependencia para la seguridad de web, ejemplo CORS, TOKEN -->
-        <dependency>
+        <!--dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+        </dependency-->
     </dependencies>
 
     <build>
