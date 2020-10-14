@@ -13,13 +13,13 @@
 
         <!-- DB schema will be updated if needed -->
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <mapping class="com.unlugarenlacosta.entities.Destination"></mapping>
-        <mapping class="com.unlugarenlacosta.entities.Category"></mapping>
-        <mapping class="com.unlugarenlacosta.entities.Beach"></mapping>
-        <mapping class="com.unlugarenlacosta.entities.Location"></mapping>
-        <mapping class="com.unlugarenlacosta.entities.Commentary"></mapping>
-        <mapping class="com.unlugarenlacosta.entities.Creek"></mapping>
-        <mapping class="com.unlugarenlacosta.entities.User"></mapping>
+        <mapping class="com.dimetulugar.entities.Destination"></mapping>
+        <mapping class="com.dimetulugar.entities.Category"></mapping>
+        <mapping class="com.dimetulugar.entities.Beach"></mapping>
+        <mapping class="com.dimetulugar.entities.Location"></mapping>
+        <mapping class="com.dimetulugar.entities.Commentary"></mapping>
+        <mapping class="com.dimetulugar.entities.Creek"></mapping>
+        <mapping class="com.dimetulugar.entities.User"></mapping>
 
     </session-factory>
 </hibernate-configuration>

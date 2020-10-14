@@ -1,4 +1,4 @@
-package com.unlugarenlacosta.encoder;
+package com.dimetulugar.encoder;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;

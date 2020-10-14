@@ -1,4 +1,4 @@
-package com.unlugarenlacosta.entities;
+package com.dimetulugar.entities;
 
 import javax.persistence.*;
 

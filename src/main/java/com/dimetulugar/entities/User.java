@@ -1,4 +1,4 @@
-package com.unlugarenlacosta.entities;
+package com.dimetulugar.entities;
 
 
 import javax.persistence.*;
@@ -22,6 +22,9 @@ public class User{
     private String password;
 
     @Basic
+    private boolean email_verify;
+
+    @Basic
     private boolean isDeleted;
 
     @ManyToMany
@@ -36,11 +39,12 @@ public class User{
         super();
     }
 
-    public User(Long id, String username, String email, String password, boolean isDeleted, List<Destination> destinations) {
+    public User(Long id, String username, String email, String password, boolean email_verify, boolean isDeleted, List<Destination> destinations) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
+        this.email_verify = email_verify;
         this.isDeleted = isDeleted;
         this.destinations = destinations;
     }
@@ -91,5 +95,13 @@ public class User{
 
     public void setDestinations(List<Destination> destinations) {
         this.destinations = destinations;
+    }
+
+    public boolean isEmail_verify() {
+        return email_verify;
+    }
+
+    public void setEmail_verify(boolean email_verify) {
+        this.email_verify = email_verify;
     }
 }

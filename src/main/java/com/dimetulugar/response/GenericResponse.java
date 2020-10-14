@@ -1,4 +1,4 @@
-package com.unlugarenlacosta.response;
+package com.dimetulugar.response;
 
 public class GenericResponse {
 

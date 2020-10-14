@@ -1,19 +1,17 @@
-package com.unlugarenlacosta.entities;
+package com.dimetulugar.entities;
 
 import javax.persistence.*;
 
 @Entity
-public class Beach {
+public class Creek {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String flag;
-
     private Long surge;
 
-    private String landType;
+    private String typeOfCreek;
 
     private Long dirt;
 

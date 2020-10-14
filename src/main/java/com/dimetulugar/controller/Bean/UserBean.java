@@ -1,4 +1,4 @@
-package com.unlugarenlacosta.controller.Bean;
+package com.dimetulugar.controller.Bean;
 
 public class UserBean {
 

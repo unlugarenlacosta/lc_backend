@@ -1,6 +1,6 @@
-package com.unlugarenlacosta.interfaces;
+package com.dimetulugar.interfaces;
 
-import com.unlugarenlacosta.entities.User;
+import com.dimetulugar.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,10 +1,10 @@
-package com.unlugarenlacosta.controller;
+package com.dimetulugar.controller;
 
-import com.unlugarenlacosta.controller.Bean.UserBean;
-import com.unlugarenlacosta.encoder.PasswordEncoderGenerator;
-import com.unlugarenlacosta.entities.User;
-import com.unlugarenlacosta.interfaces.UserRepository;
-import com.unlugarenlacosta.response.GenericResponse;
+import com.dimetulugar.controller.Bean.UserBean;
+import com.dimetulugar.encoder.PasswordEncoderGenerator;
+import com.dimetulugar.entities.User;
+import com.dimetulugar.interfaces.UserRepository;
+import com.dimetulugar.response.GenericResponse;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
